@@ -1,8 +1,7 @@
-this is simple nodejs backend server using mysql.
+This is simple nodejs backend server using mysql and Express.
 
-don't expect more from this one, this one only for learnig purpose.
+Don't expect more from this one, this one only for learnig purpose.
 
-Used Express for this server.
 
 Hope You understand
 Have a Good Day..!
