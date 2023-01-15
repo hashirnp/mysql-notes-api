@@ -8,9 +8,12 @@ router.get('/', (req, res) => {
         if (!err) {
             res.send(rows);
         } else {
+            if(row[0]==undefined){
+                res.send('No Data')
+            }
             console.log(err);
         }
-    }) 
+    })
 })
 
 router.post('/', (req, res) => {
@@ -56,7 +59,7 @@ router.put('/update/:id/:note', (req, res) => {
     })
 })
 
-router.delete('/delete/:id', (req, res) => { 
+router.delete('/delete/:id', (req, res) => {
     var id = req.params.id;
 
     mysqlConnection.query(`DELETE from notes WHERE id = '${id}'`, (err, row, fields) => {
