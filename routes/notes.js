@@ -1,4 +1,3 @@
-const e = require('express');
 const express = require('express')
 const router = express.Router();
 const mysqlConnection = require('../connection')
@@ -17,7 +16,7 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     var note = req.body.note;
     if (req.body && req.body.note) {
-        mysqlConnection.query(`INSERT INTO notes ( notes) VALUES ('${note}')`, (err, rows, fields) => {
+        mysqlConnection.query(`INSERT INTO notes (notes) VALUES ('${note}')`, (err, rows, fields) => {
             if (err) {
                 console.log(err);
                 res.sendStatus(404);
