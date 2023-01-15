@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
         if (!err) {
             res.send(rows);
         } else {
-            if(row[0]==undefined){
+            if(rows[0]==undefined){
                 res.send('No Data')
             }
             console.log(err);
