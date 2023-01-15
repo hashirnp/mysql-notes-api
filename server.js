@@ -12,6 +12,9 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
+app.use('/',(req,res)=>{
+res.send('This is my first api')
+})
 app.use('/notes', notesRoutes)
 
 
