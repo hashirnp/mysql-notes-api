@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({
 app.use('/notes', notesRoutes)
 
 
-
-app.listen(process.env.PORT || 3000, () => {
+const PORT=3000;
+app.listen(process.env.PORT || PORT, () => {
     console.log('Server Started')
 })
