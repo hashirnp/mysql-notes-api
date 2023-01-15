@@ -3,16 +3,17 @@ const router = express.Router();
 const mysqlConnection = require('../connection')
 
 router.get('/', (req, res) => {
-    console.log('Called')
     mysqlConnection.query("SELECT * from notes", (err, rows, fields) => {
         if (!err) {
             res.send(rows);
         } else {
-            if(rows[0]==undefined){
+            if (rows[0] == undefined) {
+                res.writeHead(404) 
                 res.send('No Data')
             }
             console.log(err);
         }
+        
     })
 })
 

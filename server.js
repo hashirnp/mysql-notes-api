@@ -12,13 +12,15 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
-app.use('/',(req,res)=>{
-res.send('This is my first api')
-})
 app.use('/notes', notesRoutes)
 
+app.use('/', (req, res) => {
+    console.log("main called")
+    res.send('This is my first api')
+})
 
-const PORT=3000;
+
+const PORT = 3000;
 app.listen(process.env.PORT || PORT, () => {
     console.log('Server Started')
 })
