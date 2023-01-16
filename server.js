@@ -14,7 +14,9 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
-app.use('/notes', notesRoutes)
+// app.use('/notes', notesRoutes)
+app.use(subdomain('/notes', apiRouter))
+
 
 app.use('/', (req, res) => {
     console.log("main called")
