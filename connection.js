@@ -8,7 +8,7 @@ const mysql = require('mysql');
 //     multipleStatements: true
 // })
 var mysqlConnection = mysql.createConnection({
-    host: "containers-us-west-89.railway.app",
+    server: "containers-us-west-89.railway.app",
     user: "root",
     password: "nzAk67ECMmAmg4VEErkS",
     database: "railway",
