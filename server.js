@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 // app.use('/notes', notesRoutes)
-app.use(subdomain('/notes', apiRouter))
+app.use(subdomain('/notes', notesRoutes))
 
 
 app.use('/', (req, res) => {
