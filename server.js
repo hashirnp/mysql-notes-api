@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 const notesRoutes = require('./routes/notes')
 
 var app = express();
+app.set("subdomain offset", 1);
+
 app.use(cors())
 
 app.use(bodyParser.json());
